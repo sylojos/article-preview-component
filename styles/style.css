@@ -164,6 +164,14 @@ body {
   clip-path: inset(50%);
 }
 
+.social-menu-default {
+  display: none;
+}
+
+.social-menu-active {
+  display: flex;
+}
+
 #social-menu p:first-child {
   font-size: var(--fs-text-share);
   font-weight: var(--fw-text-share);
