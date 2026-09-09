@@ -10,6 +10,8 @@
   --color-gray-blue-800: oklch(44.675% 0.03841 259.945);
   --color-gray-blue-600: oklch(59.075% 0.04261 255.722);
   --color-gray-blue-400: oklch(74.704% 0.03346 251.261);
+  --color-gray-blue-200: oklch(95.834% 0.01041 248.177);
+  --color-white: oklch(100% 0.00011 271.152);
 
   --font-family-manrope: "Manrope", sans-serif;
 
@@ -32,6 +34,8 @@
   --c-author: var(--color-gray-blue-800);
   --c-date: var(--color-gray-blue-400);
   --c-text-share: var(--color-gray-blue-400);
+  --c-article-bg: var(--color-white);
+  --c-body-bg: var(--color-gray-blue-200);
 
   --ff-primary: var(--font-family-manrope);
 
@@ -99,6 +103,11 @@ body {
   min-block-size: 100dvb;
   font-family: var(--ff-primary);
   line-height: var(--lh-body);
+  background-color: var(--c-body-bg);
+}
+
+.article {
+  background-color: var(--c-article-bg);
 }
 
 .article-main > h1 {
