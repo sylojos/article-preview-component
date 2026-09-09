@@ -64,6 +64,7 @@
   --ls-text-share: var(--letter-spacing-38pc);
 
   --br-button-share: var(--radius-full);
+  --br-author-avatar: var(--radius-full);
 }
 
 *,
@@ -128,6 +129,12 @@ body {
   font-weight: var(--fw-main);
   letter-spacing: var(--ls-main);
   color: var(--c-main);
+}
+
+.author-avatar {
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: var(--br-author-avatar);
 }
 
 .author-info > p:first-child {
