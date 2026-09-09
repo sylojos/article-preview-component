@@ -29,6 +29,8 @@
   --letter-spacing-5pc: calc(5 * 0.01em);
   --letter-spacing-38pc: calc(38 * 0.01em);
 
+  --radius-full: 50%;
+
   --c-title: var(--color-gray-blue-800);
   --c-main: var(--color-gray-blue-600);
   --c-author: var(--color-gray-blue-800);
@@ -36,6 +38,8 @@
   --c-text-share: var(--color-gray-blue-400);
   --c-article-bg: var(--color-white);
   --c-body-bg: var(--color-gray-blue-200);
+  --c-button-bg-default: var(--color-gray-blue-200);
+  --c-share-icon-default: var(--color-gray-blue-600);
 
   --ff-primary: var(--font-family-manrope);
 
@@ -58,6 +62,8 @@
   --ls-author: var(--letter-spacing-5pc);
   --ls-date: var(--letter-spacing-5pc);
   --ls-text-share: var(--letter-spacing-38pc);
+
+  --br-button-share: var(--radius-full);
 }
 
 *,
@@ -144,4 +150,20 @@ body {
   letter-spacing: var(--ls-text-share);
   color: var(--c-text-share);
   text-transform: uppercase;
+}
+
+button {
+  cursor: pointer;
+  inline-size: 32px;
+  block-size: 32px;
+  background-color: var(--c-button-bg-default);
+  border: none;
+  border-radius: var(--br-button-share);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button svg path {
+  fill: var(--c-share-icon-default);
 }
