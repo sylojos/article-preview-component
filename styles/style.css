@@ -1,3 +1,17 @@
+/*
+ * Font Name: Manrope
+ * Source: https://github.com/davelab6/manrope
+ * Author: Michael Sharanda (https://github.com/sharanda)
+ * Contributors: https://github.com/davelab6/manrope/graphs/contributors?all=1
+ * License: SIL Open Font License 1.1
+*/
+
+:root {
+  --font-family-manrope: "Manrope", sans-serif;
+
+  --ff-primary: var(--font-family-manrope);
+}
+
 *,
 *::before,
 *::after {
@@ -39,4 +53,5 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   min-block-size: 100dvb;
+  font-family: var(--ff-primary);
 }
