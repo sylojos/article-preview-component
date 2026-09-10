@@ -338,3 +338,90 @@ button svg path {
     --gap-col-social-menu: var(--spacing-16);
   }
 }
+
+@media (min-width: 37.625em) and (max-width: 54.4em) {
+  :root {
+    --font-size-18: calc(18 / 16 * 1rem);
+    --line-height-145pc: 1.45;
+
+    --spacing-18: calc(18 / 16 * 1rem);
+    --spacing-40: calc(40 / 16 * 1rem);
+
+    --fs-title: var(--font-size-18);
+    --lh-title: var(--line-height-145pc);
+
+    --pdi-article-content: 0 var(--spacing-40);
+    --pdb-article-content: var(--spacing-32);
+    --pdi-share-menu-active: var(--spacing-20);
+    --pdb-share-menu-active: var(--spacing-18);
+
+    --mis-share-menu: var(--spacing-32);
+
+    --gap-col-article: var(--spacing-40);
+    --gap-col-social-icon: var(--spacing-12);
+    --gap-col-social-menu: var(--spacing-16);
+
+    --br-share-menu: var(--radius-10);
+    --br-article-image: var(--radius-10) 0 0 var(--radius-10);
+  }
+
+  .article {
+    flex-direction: row;
+    column-gap: var(--gap-col-article);
+    max-inline-size: 731px;
+    overflow: revert;
+  }
+
+  .article-image {
+    border-radius: var(--br-article-image);
+    object-position: 50% 0;
+  }
+
+  .article-content {
+    padding-inline: var(--pdi-article-content);
+    padding-block: var(--pdb-article-content);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-main {
+    margin-block-end: auto;
+  }
+
+  .author-active {
+    display: flex;
+  }
+
+  .article-share-active {
+    all: revert;
+  }
+
+  .social-menu-active {
+    display: flex;
+    align-items: center;
+    column-gap: var(--gap-col-social-menu);
+    margin-inline-start: var(--mis-share-menu);
+    background-color: var(--c-share-menu-bg);
+    position: absolute;
+    inset-block-end: 96px;
+    inset-inline-end: -22px;
+    padding-inline: var(--pdi-share-menu-active);
+    padding-block: var(--pdb-share-menu-active);
+    border-radius: var(--br-share-menu);
+  }
+
+  .social-menu-active::before {
+    content: "";
+    inline-size: 20px;
+    block-size: 20px;
+    background-color: var(--c-share-menu-bg);
+    position: absolute;
+    transform: rotate(45deg);
+    inset-block-start: 45px;
+    inset-inline-start: 118px;
+  }
+
+  .button-active {
+    margin-inline-end: 0;
+  }
+}
