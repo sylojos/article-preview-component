@@ -163,7 +163,7 @@ body {
 }
 
 .article > div:first-child {
-  block-size: 200px;
+  block-size: clamp(12.5rem, 44.44vw + 2.083rem, 18.75rem);
 }
 
 .article-image {
