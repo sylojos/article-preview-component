@@ -331,3 +331,10 @@ button {
 button svg path {
   fill: var(--c-share-icon-default);
 }
+
+@media (max-width: 20.875em) {
+  :root {
+    --gap-col-social-icon: var(--spacing-12);
+    --gap-col-social-menu: var(--spacing-16);
+  }
+}
