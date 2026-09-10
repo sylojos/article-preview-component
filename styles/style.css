@@ -29,7 +29,15 @@
   --letter-spacing-5pc: calc(5 * 0.01em);
   --letter-spacing-38pc: calc(38 * 0.01em);
 
+  --spacing-12: calc(12 / 16 * 1rem);
+  --spacing-16: calc(16 / 16 * 1rem);
+  --spacing-20: calc(20 / 16 * 1rem);
+  --spacing-24: calc(24 / 16 * 1rem);
+  --spacing-32: calc(32 / 16 * 1rem);
+  --spacing-36: calc(36 / 16 * 1rem);
+
   --radius-full: 50%;
+  --radius-10: calc(10 / 16 * 1rem);
 
   --c-title: var(--color-gray-blue-800);
   --c-main: var(--color-gray-blue-600);
@@ -63,8 +71,19 @@
   --ls-date: var(--letter-spacing-5pc);
   --ls-text-share: var(--letter-spacing-38pc);
 
+  --mi-article: var(--spacing-24);
+  --mbe-main: var(--spacing-32);
+
+  --pdi-content: var(--spacing-32);
+  --pdbe-content: var(--spacing-20);
+
+  --gap-row-article: var(--spacing-36);
+  --gap-row-main: var(--spacing-12);
+  --gap-col-author: var(--spacing-16);
+
   --br-button-share: var(--radius-full);
   --br-author-avatar: var(--radius-full);
+  --br-article: var(--radius-10);
 }
 
 *,
@@ -111,10 +130,31 @@ body {
   font-family: var(--ff-primary);
   line-height: var(--lh-body);
   background-color: var(--c-body-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .article {
   background-color: var(--c-article-bg);
+  margin-inline: var(--mi-article);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-row-article);
+  border-radius: var(--br-article);
+  overflow: hidden;
+}
+
+.article-content {
+  padding-inline: var(--pdi-content);
+  padding-block-end: var(--pdbe-content);
+}
+
+.article-main {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-row-main);
+  margin-block-end: var(--mbe-main);
 }
 
 .article-main > h1 {
@@ -129,6 +169,19 @@ body {
   font-weight: var(--fw-main);
   letter-spacing: var(--ls-main);
   color: var(--c-main);
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--gap-col-author);
+  margin-inline-end: auto;
 }
 
 .author-avatar {
