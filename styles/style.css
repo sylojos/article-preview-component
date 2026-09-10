@@ -145,6 +145,16 @@ body {
   overflow: hidden;
 }
 
+.article > div:first-child {
+  block-size: 200px;
+}
+
+.article-image {
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 0 25%;
+}
+
 .article-content {
   padding-inline: var(--pdi-content);
   padding-block-end: var(--pdbe-content);
