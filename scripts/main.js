@@ -1,9 +1,16 @@
 const shareButton = document.querySelector("button");
 const socialMenu = document.querySelector("#social-menu");
 const socialIcons = document.querySelectorAll("ul svg");
+const articleShare = document.querySelector(".article-share");
+const articleMain = document.querySelector(".article-main");
+const author = document.querySelector(".author");
 
 shareButton.addEventListener("click", () => {
   socialMenu.classList.toggle("social-menu-active");
+  articleShare.classList.toggle("article-share-active");
+  articleMain.classList.toggle("article-main-active");
+  shareButton.classList.toggle("button-active");
+  author.classList.toggle("author-active");
 
   const isMenuOpen = shareButton.getAttribute("aria-expanded") === "true";
 
