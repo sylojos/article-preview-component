@@ -27,4 +27,12 @@ shareButton.addEventListener("click", () => {
       socialIcon.setAttribute("aria-hidden", "true");
     }
   });
+
+  if (socialMenu.hasAttribute("tabindex")) {
+    socialMenu.removeAttribute("tabindex");
+  } else {
+    socialMenu.setAttribute("tabindex", "-1");
+    socialMenu.focus();
+    socialMenu.style.outline = "none";
+  }
 });
