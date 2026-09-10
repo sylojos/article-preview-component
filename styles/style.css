@@ -12,6 +12,9 @@
   --color-gray-blue-400: oklch(74.704% 0.03346 251.261);
   --color-gray-blue-200: oklch(95.834% 0.01041 248.177);
   --color-white: oklch(100% 0.00011 271.152);
+  --color-blue: oklch(58.914% 0.20295 257.877);
+  --color-light-blue: oklch(68.181% 0.15851 243.377);
+  --color-red: oklch(58.241% 0.23644 25.524);
 
   --font-family-manrope: "Manrope", sans-serif;
 
@@ -53,6 +56,9 @@
   --c-share-icon-default: var(--color-gray-blue-600);
   --c-share-icon-active: var(--color-white);
   --c-share-menu-bg: var(--color-gray-blue-800);
+  --c-fb-icon: var(--color-blue);
+  --c-twitter-icon: var(--color-light-blue);
+  --c-pinterest-icon: var(--color-red);
 
   --ff-primary: var(--font-family-manrope);
 
@@ -287,6 +293,18 @@ body {
 
 .social > li:nth-child(2) {
   align-self: center;
+}
+
+.social > li:nth-child(1) a:is(:hover, :focus) path {
+  fill: var(--c-fb-icon);
+}
+
+.social > li:nth-child(2) a:is(:hover, :focus) path {
+  fill: var(--c-twitter-icon);
+}
+
+.social > li:nth-child(3) a:is(:hover, :focus) path {
+  fill: var(--c-pinterest-icon);
 }
 
 button {
